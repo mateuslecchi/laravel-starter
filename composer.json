@@ -36,6 +36,7 @@
         "fakerphp/faker": "^1.13",
         "friendsofphp/php-cs-fixer": "^2.16",
         "laravel/breeze": "^0.0.5",
+        "laravel/sail": "^1.8",
         "mockery/mockery": "^1.4",
         "nunomaduro/collision": "^5.0",
         "phpunit/phpunit": "^9.0"
