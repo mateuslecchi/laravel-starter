@@ -1,5 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Frontend\FrontendController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,10 +31,10 @@ Route::get('language/{language}', 'LanguageController@switch')->name('language.s
 * --------------------------------------------------------------------
 */
 Route::group(['namespace' => 'Frontend', 'as' => 'frontend.'], function () {
-    Route::get('/', 'FrontendController@index')->name('index');
-    Route::get('home', 'FrontendController@index')->name('home');
-    Route::get('privacy', 'FrontendController@privacy')->name('privacy');
-    Route::get('terms', 'FrontendController@terms')->name('terms');
+    Route::get('/', [FrontendController::class,'index'])->name('index');
+    Route::get('home', [FrontendController::class,'index'])->name('home');
+    Route::get('privacy', [FrontendController::class,'privacy'])->name('privacy');
+    Route::get('terms', [FrontendController::class,'terms'])->name('terms');
 
     Route::group(['middleware' => ['auth']], function () {
         /*
